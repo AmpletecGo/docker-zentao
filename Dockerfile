@@ -1,5 +1,5 @@
 FROM hub.c.163.com/public/centos:7.2.1511
-MAINTAINER wanxin <258621580@qq.com>
+MAINTAINER ampletec <rj05116@163.com>
 
 #install tools
 #RUN yum install -y tar && \
@@ -8,8 +8,8 @@ MAINTAINER wanxin <258621580@qq.com>
 
 # download zentao package and unzip
 WORKDIR /opt
-RUN wget http://dl.cnezsoft.com/zentao/9.1.2/ZenTaoPMS.9.1.2.zbox_64.tar.gz && \
-tar -zxvf ZenTaoPMS.9.1.2.zbox_64.tar.gz
+RUN wget http://dl.cnezsoft.com/zentao/9.6/ZenTaoPMS.9.6.stable.zbox_64.tar.gz && \
+tar -zxvf ZenTaoPMS.9.6.stable.zbox_64.tar.gz
 
 #copy script
 COPY script /opt/script
